@@ -3,8 +3,7 @@ package com.example.PostProject;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
-@SpringBootApplication(scanBasePackages = "com.example.PostProject")
+@SpringBootApplication
 public class Application {
 
 	public static void main(String[] args) {
