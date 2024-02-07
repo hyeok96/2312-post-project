@@ -46,8 +46,8 @@ public class AuthService {
             return false;
         }
 
-        UserEntity userEntity = userRepository.findByUsername(username)
-                .orElseGet(() -> userRepository.save(UserEntity.builder().username(username).build()));
+        UserEntity userEntity = userRepository.findByUsername(email)
+                .orElseGet(() -> userRepository.save(UserEntity.builder().email(email).build()));
 
         RolesEntity roles = roleRepository.findByName("ROLE_USER")
                 .orElseThrow(() -> new NotFoundException("ROLE_USER를 찾을 수가 없습니다."));
